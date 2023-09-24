@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    
+    <script type="module" crossorigin src="./assets/index-6a2e3f4a.js"></script>
+    <link rel="stylesheet" href="./assets/index-c2b2e895.css">
+  </head>
+
+  <body>
+    <main class="Main u-bg">
+      <div class="u-wrapper">
+        <section class="Rating" id="rating">
+          <div class="Rating-imgWrapper">
+            <img
+              class="Rating-img"
+              src="./assets/icon-star-3e70bfda.svg"
+              alt="icon star" />
+          </div>
+          <h2 class="Rating-h2">How did we do?</h2>
+          <p class="Rating-p">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <form class="Rating-form" id="form">
+            <fieldset>
+              <legend class="u-visuallyHhidden">
+                Please select your preferred rating
+              </legend>
+              <div class="Rating-list">
+                <div class="Rating-item">
+                  <input
+                    class="Rating-radio"
+                    type="radio"
+                    id="raint-1"
+                    name="rating"
+                    value="1" />
+                  <label class="Rating-label" for="raint-1">1</label>
+                </div>
+
+                <div class="Rating-item">
+                  <input
+                    class="Rating-radio"
+                    type="radio"
+                    id="raint-2"
+                    name="rating"
+                    value="2" />
+                  <label class="Rating-label" for="raint-2">2</label>
+                </div>
+
+                <div class="Rating-item">
+                  <input
+                    class="Rating-radio"
+                    type="radio"
+                    id="raint-3"
+                    name="rating"
+                    value="3" />
+                  <label class="Rating-label" for="raint-3">3</label>
+                </div>
+
+                <div class="Rating-item">
+                  <input
+                    class="Rating-radio"
+                    type="radio"
+                    id="raint-4"
+                    name="rating"
+                    value="4" />
+                  <label class="Rating-label" for="raint-4">4</label>
+                </div>
+
+                <div class="Rating-item">
+                  <input
+                    class="Rating-radio"
+                    type="radio"
+                    id="raint-5"
+                    name="rating"
+                    value="5" />
+                  <label class="Rating-label" for="raint-5">5</label>
+                </div>
+              </div>
+              <div>
+                <button class="Rating-btn" type="submit">Submit</button>
+              </div>
+            </fieldset>
+            <div class="Rating-error" id="error">
+              Select a rating to continue
+            </div>
+          </form>
+        </section>
+        <section class="Response" id="response">
+          <img
+            src="./assets/illustration-thank-you-a52834b7.svg"
+            alt="thank you illutration"
+            class="Response-img" />
+
+          <p class="Response-result">
+            You selected <span id="response-selected"></span> out of 5
+          </p>
+
+          <h2 class="Response-h2">Thank you!</h2>
+
+          <p class="Response-p">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
