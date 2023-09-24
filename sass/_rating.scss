@@ -1,0 +1,131 @@
+.Rating {
+  width: 100%;
+  padding: 32px;
+
+  background: linear-gradient(
+    180deg,
+    var(--clr-black-gradient-start),
+    var(--clr-black-gradient-end)
+  );
+
+  border-radius: 35px;
+
+  &-imgWrapper {
+    display: inline-block;
+    padding: 16px;
+    background-color: var(--clr-dark-blue);
+    border-radius: 100%;
+
+    margin-bottom: 30px;
+  }
+
+  &-img {
+    width: 20px;
+    fill: var(--clr-orange);
+  }
+
+  &-h2 {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-bold);
+    color: var(--clr-pure-white);
+
+    margin-bottom: 15px;
+  }
+
+  &-p {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+    color: var(--clr-light-grey);
+
+    margin-bottom: 24px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(51px, auto));
+    gap: 16px;
+
+    margin-bottom: 32px;
+
+    @media (max-width: 31.25rem) {
+      grid-template-columns: repeat(auto-fit, minmax(40px, auto));
+    }
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-radio {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    opacity: 0;
+    height: 100%;
+
+    &:hover + .Rating-label {
+      background: var(--clr-medium-gray);
+      color: var(--clr-pure-white);
+    }
+
+    &:checked + .Rating-label {
+      background: var(--clr-orange);
+      color: var(--clr-pure-white);
+    }
+  }
+
+  &-label {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding-top: 1px;
+
+    color: var(--clr-medium-gray);
+    font-size: var(--fs-rating);
+    font-weight: var(--fw-bold);
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-dark-blue);
+
+    border-radius: 100%;
+    pointer-events: none;
+    position: relative;
+
+    transition: all 0.3s ease;
+  }
+
+  &-btn {
+    width: 100%;
+    color: var(--clr-pure-white);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    background: var(--clr-orange);
+
+    padding: 15px 0;
+    border-radius: 35px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--clr-pure-white);
+      color: var(--clr-orange);
+    }
+  }
+
+  &-error {
+    text-align: center;
+    font-size: var(--fs-body);
+    margin: 0 auto;
+    color: var(--clr-orange);
+    margin-top: 1.25rem;
+    display: none;
+  }
+}

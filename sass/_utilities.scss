@@ -1,0 +1,67 @@
+.u-visuallyHhidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.u-bg {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--clr-very-dark-blue);
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+}
+
+.u-wrapper {
+  width: min(26.25rem, 95%);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.u-hide {
+  animation: hide 0.8s ease-in;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.u-show {
+  animation: show 1s ease-in;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

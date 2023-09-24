@@ -1,0 +1,44 @@
+:root {
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-gray: hsl(216, 12%, 54%);
+  --clr-orange: #fb7413;
+  --clr-pure-white: hsl(0, 0%, 100%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+
+  --clr-black-gradient-start: hsl(215, 20%, 17%);
+  --clr-black-gradient-end: hsl(216, 24%, 12%);
+
+  --ff-primary: 'Overpass', sans-serif;
+
+  --lh-body: 1.5;
+
+  --fw-bold: 700;
+  --fw-regular: 400;
+}
+
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-l: clamp(1.5rem, 0.376vw + 1.412rem, 1.75rem);
+    --fs-m: clamp(0.938rem, 0.094vw + 0.915rem, 1rem);
+    --fs-rating: clamp(0.938rem, 0.188vw + 0.893rem, 1.063rem);
+    --fs-body: clamp(0.938rem, -0.094vw + 1.022rem, 1rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-body: 0.938rem;
+    --font-size-rating: 0.938rem;
+    --font-size-m: 0.938rem;
+    --font-size-l: 1.5rem;
+  }
+  @media screen and (min-width: 1440px) {
+    :root {
+      --font-size-body: 1rem;
+      --font-size-rating: 1.063rem;
+      --font-size-m: 1rem;
+      --font-size-l: 1.75rem;
+    }
+  }
+}
